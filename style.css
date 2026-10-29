@@ -1,0 +1,433 @@
+:root {
+    --roxo: #6c14d1;
+    --roxo-escuro: #2a1260;
+    --roxo-claro: #e6dcf8;
+    --fundo: #efecf8;
+    --branco: #ffffff;
+    --titulo: #1d1540;
+    --texto: #5b5878;
+    --borda: #ddd6f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(src/fundo-site.png);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2,
+h3 {
+    color: var(--titulo);
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.logo img {
+    width: 160px;
+    display: block;
+}
+
+.opcoes-header {
+    display: flex;
+    gap: 32px;
+}
+
+.opcao {
+    font-size: 15px;
+    color: var(--titulo);
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.opcao.ativo {
+    border-bottom-color: var(--roxo);
+}
+
+/* Botões */
+
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.botao-roxo {
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+
+.botao-contorno {
+    border: 1px solid var(--borda);
+    background-color: var(--branco);
+    color: var(--titulo);
+}
+
+.botao-branco {
+    background-color: var(--branco);
+    color: var(--roxo-escuro);
+}
+
+.botao-pequeno {
+    padding: 6px 14px;
+    font-size: 11px;
+}
+
+.etiqueta {
+    display: inline-block;
+    border: 1px solid var(--roxo);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: var(--roxo);
+    margin-bottom: 16px;
+}
+
+.roxo {
+    color: var(--roxo);
+}
+
+.gradiente {
+    background: linear-gradient(to right, #610fbe, #bd91f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    max-width: 460px;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.botoes {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.diferenciais {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 13px;
+}
+
+.diferenciais li + li {
+    padding-left: 28px;
+    border-left: 1px solid var(--borda);
+}
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-visual img {
+    width: 125%;
+    max-width: none;
+    flex-shrink: 0;
+    height: auto;
+    display: block;
+}
+
+/* Serviços */
+
+.servicos {
+    background-color: var(--fundo);
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: none;
+    align-items: flex-start;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+
+.servicos-texto {
+    flex: 0 0 280px;
+}
+
+.servicos-texto h2 {
+    font-size: 34px;
+    margin-bottom: 16px;
+}
+
+.servicos-texto p {
+    margin-bottom: 24px;
+}
+
+.cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.icone {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--roxo-claro);
+    color: var(--roxo);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3 {
+    font-size: 15px;
+}
+
+.seta {
+    color: var(--roxo);
+    margin-top: auto;
+}
+
+/* Por que escolher + Como funciona */
+
+.sobre {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+
+.porque {
+    flex: 1;
+
+    background: linear-gradient(135deg, #2a1260 0%, #3e0992 100%);
+    background-color: var(--roxo-escuro);
+    color: var(--roxo-claro);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.porque h2 {
+    color: var(--branco);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.numeros div + div {
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.numeros strong {
+    display: block;
+    color: var(--branco);
+    font-size: 18px;
+}
+
+.numeros span {
+    font-size: 12px;
+}
+
+.como-funciona {
+    flex: 1;
+}
+
+.como-funciona h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.etapas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    list-style: none;
+    margin-top: 24px;
+}
+
+.numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--roxo-claro);
+    color: var(--roxo);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.etapas h3 {
+    font-size: 14px;
+}
+
+.etapas p {
+    font-size: 12px;
+}
+
+/* Chamada final */
+
+.chamada {
+    max-width: 1152px;
+    background-color: var(--roxo);
+    background: linear-gradient(90deg, #6c14d1 0%, #a55ff0 100%);
+    color: var(--branco);
+    border-radius: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.chamada h2 {
+    color: var(--branco);
+    font-size: 18px;
+}
+
+.chamada p {
+    font-size: 13px;
+}
+
+/* Rodapé */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.opcoes-footer {
+    display: flex;
+    gap: 24px;
+}
+
+/* Telas menores */
+
+@media (max-width: 900px) {
+    header,
+    .hero,
+    .servicos,
+    .sobre,
+    .chamada,
+    footer {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .opcoes-header,
+    .botoes,
+    .diferenciais {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .hero-visual img {
+        width: 100%;
+    }
+
+    .servicos-texto {
+        flex: none;
+    }
+
+    .cards,
+    .etapas,
+    .numeros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
